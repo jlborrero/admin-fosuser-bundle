@@ -1,0 +1,14 @@
+{% extends 'CoreBackendBundle::base.html.twig' %}
+
+
+{% block migas %}
+    {{ parent() }}
+    <li class="active">Editar perfil de usuario</li>
+{% endblock %}
+
+
+
+
+{% block fos_user_content %}
+{% include "FOSUserBundle:Profile:edit_content.html.twig" %}
+{% endblock fos_user_content %}

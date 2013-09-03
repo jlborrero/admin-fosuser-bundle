@@ -1,0 +1,36 @@
+admin_user:
+    pattern:  /
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:index" }
+
+admin_user_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:show" }
+
+admin_user_new:
+    pattern:  /new
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:new" }
+
+admin_user_create:
+    pattern:  /create
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:create" }
+    requirements: { _method: post }
+
+admin_user_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:edit" }
+
+admin_user_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:update" }
+    requirements: { _method: post }
+
+admin_user_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:delete" }
+    requirements: { _method: post }
+
+admin_user_list:
+    pattern:  /list
+    defaults: { _controller: "JlbsAdminFOSUserBundle:User:list" }
+    options:
+      expose: true

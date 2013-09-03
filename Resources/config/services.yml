@@ -1,0 +1,12 @@
+parameters:
+#    core_user.example.class: Jlbs\AdminFOSUserBundle\Example
+
+services:
+#    core_user.example:
+#        class: %core_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    core_user.registration.form.type:
+        class: Jlbs\AdminFOSUserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: core_user_registration }

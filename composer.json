@@ -1,0 +1,24 @@
+{
+    "name": "jlbs/admin-fosuser-bundle",
+    "type": "symfony-bundle",
+    "description": "Easy admin FOSUserBundle for symfony2",
+    "keywords": ["admin", "user"],
+    "license": "MIT",
+    "version": "master",
+    "authors": [
+        {
+            "name": "Joe Luis Borrero Senciales",
+            "email": "jlborrero@gmail.com"
+        }
+    ],
+    "require": {
+        "jlbs/admin-fosuser-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jlbs\\AdminFOSUserBundle": ""
+        }
+    },
+    "target-dir": "Jlbs/AdminFOSUserBundle"
+}

@@ -1,0 +1,22 @@
+{% extends 'CoreBackendBundle::base.html.twig' %}
+
+
+{% block migas %}
+    {{ parent() }}
+    <li><a href="{{ path('admin_user') }}">Gestionar usuarios</a> <span class="divider">/</span></li>
+    <li class="active">Crear nuevo</li>
+{% endblock %}
+
+{% block content %}
+
+<form class="form-horizontal" action="{{ path('admin_user_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Crear</button>
+        <a class="btn" href="{{ path('admin_user') }}">
+            Cancelar
+        </a>
+    </div>
+</form>
+
+{% endblock content %}

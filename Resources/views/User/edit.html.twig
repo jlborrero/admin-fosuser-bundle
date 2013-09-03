@@ -1,0 +1,21 @@
+{% extends 'CoreBackendBundle::base.html.twig' %}
+
+
+{% block migas %}
+    {{ parent() }}
+    <li><a href="{{ path('admin_user') }}">Gestionar usuarios</a> <span class="divider">/</span></li>
+    <li class="active">Editar "{{ entity }}"</li>
+{% endblock %}
+
+{% block content %}
+    <form class="form-horizontal" action="{{ path('admin_user_update', { 'id': entity.id }) }}"
+          method="post" {{ form_enctype(edit_form) }}>
+        {{ form_widget(edit_form) }}
+        <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Editar</button>
+            <a href="{{ path('admin_user') }}" class="btn">
+                Cancelar
+            </a>
+        </div>
+    </form>
+{% endblock %}
