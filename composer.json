@@ -12,8 +12,8 @@
         }
     ],
     "require": {
-        "jlbs/admin-fosuser-bundle": "dev-master",
-        "friendsofsymfony/user-bundle": "*"
+        "jlbs/admin-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "2.0.*@dev"
     },
     "autoload": {
         "psr-0": {
