@@ -18,7 +18,7 @@ services:
 
   jlbs.backend.navbar.menu:
       class: Knp\Menu\MenuItem # the service definition requires setting the class
-      factory_service: core.backend.navbar_builder
+      factory_service: jlbs.backend.navbar_builder
       factory_method: mainMenu
       arguments: ["@request"]
       scope: request # needed as we have the request as a dependency here
@@ -27,7 +27,7 @@ services:
 
   jlbs.backend.navbar.user_menu:
       class: Knp\Menu\MenuItem # the service definition requires setting the class
-      factory_service: core.backend.navbar_builder
+      factory_service: jlbs.backend.navbar_builder
       factory_method: createRightSideDropdownMenu
       arguments: ["@request"]
       scope: request # needed as we have the request as a dependency here
