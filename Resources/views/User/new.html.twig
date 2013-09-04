@@ -1,5 +1,4 @@
-{% extends 'CoreBackendBundle::base.html.twig' %}
-
+{% extends 'JlbsAdminBundle:Layout:base.html.twig' %}
 
 {% block migas %}
     {{ parent() }}
@@ -11,7 +10,7 @@
 
 <form class="form-horizontal" action="{{ path('admin_user_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
-    <div class="form-actions">
+    <div>
         <button class="btn btn-primary" type="submit">Crear</button>
         <a class="btn" href="{{ path('admin_user') }}">
             Cancelar
