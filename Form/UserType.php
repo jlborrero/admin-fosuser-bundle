@@ -12,15 +12,12 @@ class UserType extends AbstractType
     {
         $builder
             ->add('nombre')
-            ->add('p_apellido', null, array('label' => 'Primer Apellido', 'requred' => true))
-            ->add('s_apellido', null, array('label' => 'Segundo Apellido', 'required' => true))
+            ->add('p_apellido', null, array('label' => 'Primer Apellido'))
+            ->add('s_apellido', null, array('label' => 'Segundo Apellido'))
             ->add('username', null, array('label' => 'Usuario'))
             ->add('email')
             ->add('enabled', null, array('required' => false,'label' => 'Habilitado'))
             ->add('plain_password', 'password', array('label' => 'Contraseña'))
-            ->add('nombre', null, array('required' => false))
-            ->add('p_apellido', null, array('label' => 'Primer Apellido'))
-            ->add('s_apellido', null, array('label' => 'Primer Apellido'))
 
             ->add(
                 'roles',

@@ -2,20 +2,24 @@
 
 {% block migas %}
     {{ parent() }}
-    <li><a href="{{ path('admin_user') }}">Gestionar usuarios</a> <span class="divider">/</span></li>
+    <li><a href="{{ path('admin_user') }}">Gestionar usuarios</a></li>
     <li class="active">Crear nuevo</li>
 {% endblock %}
 
 {% block content %}
-
-<form class="form-horizontal" action="{{ path('admin_user_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
-    <div>
-        <button class="btn btn-primary" type="submit">Crear</button>
-        <a class="btn" href="{{ path('admin_user') }}">
-            Cancelar
-        </a>
-    </div>
-</form>
+    <form class="form-horizontal" role="form" action="{{ path('admin_user_create') }}"
+          method="post" {{ form_enctype(form) }}>
+        <div class="col-lg-offset-1 col-lg-8">
+            {{ form_widget(form) }}
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-6">
+                <button class="btn btn-primary" type="submit">Crear</button>
+                <a class="btn" href="{{ path('admin_user') }}">
+                    Cancelar
+                </a>
+            </div>
+        </div>
+    </form>
 
 {% endblock content %}
